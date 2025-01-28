@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تمارين رياضية لجميع الأعمار. تمارين مناسبة للأطفال، الشباب، وكبار السن لتحسين اللياقة والصحة العامة.">
+    <meta name="keywords" content="تمارين رياضية, صحة, لياقة, كبار السن, الأطفال, الشباب, نظام غذائي صحي, الرياضة">
+    <meta name="author" content="تمارين رياضية">
+    <meta property="og:title" content="تمارين رياضية لجميع الأعمار">
+    <meta property="og:description" content="اكتشف تمارين رياضية مناسبة للأطفال، الشباب، وكبار السن لتحسين الصحة واللياقة.">
+    <meta property="og:image" content="your-image-url.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-website-url.com">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "تمارين رياضية لجميع الأعمار",
+      "description": "تمارين رياضية للأطفال، الشباب، وكبار السن لتحسين الصحة واللياقة البدنية.",
+      "url": "https://your-website-url.com"
+    }
+    </script>
+    <title>تمارين رياضية لجميع الأعمار - الأطفال، الشباب، وكبار السن</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            background: linear-gradient(to right, #4caf50, #81c784);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            float: right;
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .content {
+            margin: 20px;
+        }
+
+        .category {
+            margin-bottom: 30px;
+        }
+
+        .exercise {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .exercise img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .exercise img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .exercise div {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .hidden {
+            display: none;
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        .visible {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            cursor: pointer;
+            color: #4CAF50;
+            transition: color 0.3s ease;
+        }
+
+        h2:hover {
+            color: #2E7D32;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function toggleDetails(categoryId) {
+            const details = document.getElementById(categoryId);
+            if (details.classList.contains('hidden')) {
+                details.classList.remove('hidden');
+                details.classList.add('visible');
+            } else {
+                details.classList.add('hidden');
+                details.classList.remove('visible');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>تمارين رياضية لكل الأعمار</h1>
+</header>
+
+<nav>
+    <a href="index.html">الصفحة الرئيسية</a>
+    <a href="nutrition.html">نظام غذائي صحي</a>
+    <a href="health-tips.html">أهمية الصحة والرياضة</a>
+    <a href="exercise.html">رياضة يومية خفيفة</a>
+    <a href="blood.html">تحليل معدل السكر والضغط</a>
+</nav>
+
+<div class="content">
+    <div class="category">
+        <h2 onclick="toggleDetails('seniors-exercises')">تمارين مناسبة لكبار السن</h2>
+        <div id="seniors-exercises" class="exercise hidden">
+            <div>
+                <h3>تمرين المشي</h3>
+                <img src="1.jpg" alt="تمرين المشي لكبار السن لتحسين الدورة الدموية">
+                <p>المشي يساعد على تحسين الدورة الدموية ويخفف التوتر.</p>
+            </div>
+            <div>
+                <h3>تمرين التمدد البسيط</h3>
+                <img src="2.jpeg" alt="تمرين التمدد لكبار السن لزيادة المرونة">
+                <p>تمرين يساعد في زيادة المرونة ومنع تصلب العضلات.</p>
+            </div>
+            <div>
+                <h3>تمرين اليوغا</h3>
+                <img src="3.png" alt="تمرين اليوغا لكبار السن لتحسين التوازن والاسترخاء">
+                <p>يساعد على تحسين التوازن والاسترخاء.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2 onclick="toggleDetails('youth-exercises')">تمارين مناسبة للشباب</h2>
+        <div id="youth-exercises" class="exercise hidden">
+            <div>
+                <h3>تمرين رفع الأوزان</h3>
+                <img src="4.jpg" alt="تمرين رفع الأوزان للشباب لبناء العضلات">
+                <p>يساعد في بناء العضلات وزيادة القوة البدنية.</p>
+            </div>
+            <div>
+                <h3>تمرين الجري</h3>
+                <img src="5.jpeg" alt="تمرين الجري للشباب لتحسين اللياقة القلبية">
+                <p>يحسن اللياقة القلبية والقدرة على التحمل.</p>
+            </div>
+            <div>
+                <h3>تمرين الضغط</h3>
+                <img src="6.jpg" alt="تمرين الضغط للشباب لتقوية الجزء العلوي من الجسم">
+                <p>يعزز القوة العضلية للجزء العلوي من الجسم.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2 onclick="toggleDetails('kids-exercises')">تمارين مناسبة للأطفال</h2>
+        <div id="kids-exercises" class="exercise hidden">
+            <div>
+                <h3>القفز بالحبل</h3>
+                <img src="7.jpeg" alt="القفز بالحبل لتحسين التنسيق للأطفال">
+                <p>نشاط ممتع يساعد على تحسين التنسيق واللياقة.</p>
+            </div>
+            <div>
+                <h3>تمرين الألعاب الحركية</h3>
+                <img src="8.jpeg" alt="الألعاب الحركية للأطفال لتحفيز النشاط البدني">
+                <p>يشمل أنشطة تفاعلية تساعد الأطفال على الحركة والنشاط.</p>
+            </div>
+            <div>
+                <h3>تمرين التوازن</h3>
+                <img src="9.jpg" alt="تمرين التوازن لتحسين التركيز عند الأطفال">
+                <p>يساعد على تعزيز التركيز وتحسين التوازن الجسدي.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div style="padding: 10px; background-color: #444; color: white; display: flex; justify-content: space-between; flex-wrap: wrap; text-align: center;">
+        <!-- روابط سريعة -->
+        <div style="flex: 1; margin: 10px;">
+            <h4>روابط سريعة</h4>
+            <a href="https://www.moh.gov.sa/937/Pages/default.aspx">تواصل مع وزارة الصحة </a><br>
+    
+        </div>
+
+        <!-- معلومات الاتصال -->
+        <div style="flex: 1; margin: 10px;">
+            <h4>اتصل بنا</h4>
+            <p>البريد الإلكتروني: <br><a href="mailto:healthguide.255@gmail.com" style="color: #4CAF50;">healthguide.255@gmail.com</a></p>
+          
+        </div>
+
+ 
+</footer>
+
+
+</body>
+</html>

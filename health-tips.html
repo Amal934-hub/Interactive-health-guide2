@@ -1,0 +1,201 @@
+<!doctype html>
+<html  lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام غذائي صحي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+         body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: right;
+        }
+
+        header {
+            background: linear-gradient(to right, #4caf50, #81c784);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            float: right;
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .content {
+            margin: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        blockquote {
+            font-style: italic;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #4CAF50;
+            line-height: 1.8;
+            
+        }
+        ul {
+            margin: 10px;
+            padding: 0 20px;
+            text-align: right;
+
+        }
+        ul li {
+            margin-bottom: 20px;
+            margin-left: 500px;
+            padding: left;
+            
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>أهمية الصحة والرياضة في الإسلام</h1>
+    <p id="greeting"></p>
+</header>
+
+<nav>
+    <a href="index.html">الصفحة الرئيسية</a>
+    <a href="nutrition.html">نظام غذائي صحي</a>
+    <a href="health-tips.html">أهمية الصحة والرياضة</a>
+    <a href="exercise.html">رياضة يومية خفيفة</a>
+    <a href="blood.html">تحليل معدل السكر و الضغط  </a>
+</nav>
+
+<div class="content">
+    <h2>:أحاديث وآيات حول الصحة والرياضة</h2>
+    
+    <button onclick="toggleContent()">أحاديث و آيات حول الصحة و الرياضة </button>
+    <div id="texts" style="display: none; margin-top: 20px;">
+        <blockquote>
+            <p>قال تعالى: "وَكُلُوا وَاشْرَبُوا وَلَا تُسْرِفُوا ۚ إِنَّهُ لَا يُحِبُّ الْمُسْرِفِينَ" (الأعراف: 31).</p>
+        </blockquote>
+        <blockquote>
+            <p>قال رسول الله صلى الله عليه وسلم: "المؤمن القوي خير وأحب إلى الله من المؤمن الضعيف، وفي كل خير" (رواه مسلم).</p>
+        </blockquote>
+        <blockquote>
+            <p>قال تعالى: "وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ" (الأنفال: 60).</p>
+        </blockquote>
+    </div>
+
+    <h3>أهمية الرياضة للصحة:</h3>
+    <button onclick="toggleContent()">أهمية الرياضة للصحة </button>
+    <div id="texts" style="display: none; margin-top: 20px;"></div>
+
+        <blockquote><p>.تقوية الجهاز المناعي</p></blockquote>
+        <blockquote><p>.تحسين صحة القلب والشرايين </p></blockquote>
+        <blockquote><p>.تقليل التوتر والقلق</p></blockquote>
+        <blockquote><p>.زيادة الطاقة والنشاط</p></blockquote>
+</div>
+
+
+
+<script>
+    // رسالة ترحيبية ديناميكية بناءً على الوقت
+    const greetingElement = document.getElementById("greeting");
+    const currentHour = new Date().getHours();
+    if (currentHour < 12) {
+        greetingElement.textContent = "صباح الخير! ابدأ يومك بالنشاط.";
+    } else if (currentHour < 18) {
+        greetingElement.textContent = "مساء الخير! تذكر أن الرياضة تنعش الجسم.";
+    } else {
+        greetingElement.textContent = "مساء سعيد! حان وقت الاسترخاء بعد يوم نشط.";
+    }
+
+    // تفعيل/تعطيل النصوص
+    function toggleContent() {
+        const textsDiv = document.getElementById("texts");
+        if (textsDiv.style.display === "none") {
+            textsDiv.style.display = "block";
+        } else {
+            textsDiv.style.display = "none";
+        }
+    }
+    // تفعيل الرابط الحالي
+    const links = document.querySelectorAll(".nav-link");
+    links.forEach(link => {
+        link.addEventListener("click", function() {
+            links.forEach(link => link.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
+</script>
+<footer>
+    <div style="padding: 10px; background-color: #444; color: white; display: flex; justify-content: space-between; flex-wrap: wrap; text-align: center;">
+        <!-- روابط سريعة -->
+        <div style="flex: 1; margin: 10px;">
+            <h4>روابط سريعة</h4>
+            <a href="https://www.moh.gov.sa/937/Pages/default.aspx">تواصل مع وزارة الصحة </a><br>
+    
+        </div>
+
+        <!-- معلومات الاتصال -->
+        <div style="flex: 1; margin: 10px;">
+            <h4>اتصل بنا</h4>
+            <p>البريد الإلكتروني: <br><a href="mailto:healthguide.255@gmail.com" style="color: #4CAF50;">healthguide.255@gmail.com</a></p>
+          
+        </div>
+
+ 
+</footer>
+</body>
+</html>
